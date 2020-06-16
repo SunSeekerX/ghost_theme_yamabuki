@@ -1,0 +1,99 @@
+{
+  "name": "ghost-starter-theme",
+  "description": "A custom theme for ghost",
+  "demo": "https://starter.ghost.io",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp",
+    "serve": "cross-env NODE_ENV=development gulp",
+    "zip": "cross-env NODE_ENV=production gulp zip",
+    "test": "cross-env NODE_ENV=production gscan .",
+    "test:ci": "cross-env NODE_ENV=production gscan --fatal --verbose .",
+    "pretest": "cross-env NODE_ENV=production gulp build",
+    "preship": "cross-env NODE_ENV=production yarn test",
+    "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
+    "gc": "git add -A && git cz && git pull && git push"
+  },
+  "author": {
+    "name": "Ghost Foundation",
+    "email": "hello@ghost.org",
+    "url": "https://ghost.org"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TryGhost/Starter.git"
+  },
+  "bugs": "https://github.com/TryGhost/Starter/issues",
+  "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "autoprefixer": "9.8.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "cssnano": "4.1.10",
+    "cz-conventional-changelog": "3.2.0",
+    "gscan": "3.5.4",
+    "gulp": "4.0.2",
+    "gulp-livereload": "4.0.2",
+    "gulp-postcss": "8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-uglify": "3.0.2",
+    "gulp-util": "3.0.8",
+    "gulp-watch": "5.0.1",
+    "gulp-zip": "5.0.1",
+    "postcss-color-function": "4.1.0",
+    "postcss-custom-properties": "9.1.1",
+    "postcss-easy-import": "3.0.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "config": {
+    "posts_per_page": 15,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1200
+      },
+      "xl": {
+        "width": 2000
+      }
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
