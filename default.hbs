@@ -24,6 +24,7 @@
 </head>
 
 {{!-- 添加line-numbers为所有代码块添加行号 --}}
+
 <body class="{{body_class}} line-numbers">
     <div class="gh-viewport">
 
@@ -76,8 +77,9 @@
                 <div class="gh-foot-menu">
                     {{navigation}}
                 </div>
+
                 <div class="gh-foot-meta">
-                    Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">湘ICP备19015624号</a> Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
                 </div>
             </div>
         </footer>
@@ -126,12 +128,15 @@
     {{!-- 文章界面加载文章标题和代码高亮 --}}
     {{#is "post"}}
     {{!-- prismjs --}}
-    {{!-- <script src="{{asset "static/libs/prismjs/prism.js"}}"></script>
+    <script src="{{asset "static/libs/prismjs/prism.js"}}"></script>
     <script>
         // 配置prismjs的autoloader插件
         Prism.plugins.autoloader.languages_path = '/assets/static/libs/prismjs/prism-components/';
-    </script> --}}
+    </script>
     {{/is}}
+
+    {{!-- custom app.js --}}
+    <script src="{{asset "built/app.js"}}"></script>
 
     {{ghost_foot}}
     {{!-- Outputs important scripts - should always be included before closing body tag --}}

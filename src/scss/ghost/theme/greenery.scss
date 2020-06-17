@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-06-16 15:12:12
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-06-16 16:40:44
+ * @LastEditTime: 2020-06-18 00:03:14
  */
 
 .gh-content {
@@ -31,6 +31,7 @@
       color: #35b378;
       background-color: rgba(27, 31, 35, 0.05);
       word-break: break-all;
+      border-radius: 6px;
     }
   }
 
@@ -61,6 +62,12 @@
       width: 0;
       background: var(--color-primary);
     }
+
+    ol,
+    ul {
+      padding-left: 1.3em;
+      padding-right: 1.5em;
+    }
   }
 
   p code,
@@ -68,14 +75,16 @@
     padding: 2px 4px;
     color: #35b378;
     background-color: rgba(27, 31, 35, 0.05);
-    word-break: break-all;
+    // word-break: break-all;
+    border-radius: 6px;
   }
-  
+
   .code-toolbar {
     border-radius: 5px;
     background: #2d2d2d;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;
     font-size: 2rem;
+    overflow: auto;
 
     &:before {
       content: '';
@@ -92,27 +101,40 @@
     }
   }
 
-  // pre {
-  //   // overflow: scroll;
-  //   // overflow-y: hidden;
-  //   // overflow-x: scroll;
-  //   padding: 0;
-  //   // background: rgba(255, 255, 255, 0.8);
-  //   // border-radius: 5px;
-  //   box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
-  // }
+  a {
+    text-decoration: none;
+    word-wrap: break-word;
+    color: #35b378;
+    &:hover {
+      border-bottom: 1px solid #35b378;
+    }
+  }
 
-  // pre:before {
-  //   content: '';
-  //   display: block;
-  //   background: url(https://imgkr.cn-bj.ufileos.com/97e4eed2-a992-4976-acf0-ccb6fb34d308.png);
-  //   height: 30px;
-  //   width: 100%;
-  //   background-size: 40px;
-  //   background-repeat: no-repeat;
-  //   background-color: #1e1e1e;
-  //   margin-bottom: -7px;
-  //   border-radius: 5px;
-  //   background-position: 10px 10px;
-  // }
+  table tr th {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+
+  table tr th,
+  table tr td {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-align: left;
+    // font-family: var(--font-serif);
+  }
+
+  img{
+    border-radius: 6px;
+    box-shadow: #CCC 0 10px 15px;
+  }
+}
+
+@media (max-width: 1296px) {
+  .gh-content {
+    .code-toolbar {
+      font-size: 1.8rem;
+    }
+  }
 }

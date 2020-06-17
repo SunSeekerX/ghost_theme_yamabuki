@@ -14,6 +14,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp",
     "serve": "cross-env NODE_ENV=development gulp",
+    "build:static": "cross-env NODE_ENV=production gulp build",
     "zip": "cross-env NODE_ENV=production gulp zip",
     "test": "cross-env NODE_ENV=production gscan .",
     "test:ci": "cross-env NODE_ENV=production gscan --fatal --verbose .",

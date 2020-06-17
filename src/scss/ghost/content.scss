@@ -3,24 +3,37 @@
  * @author: SunSeekerX
  * @Date: 2020-06-16 10:38:33
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-06-16 17:04:16
+ * @LastEditTime: 2020-06-18 00:04:34
  */
 
 .gh-content-wrap {
   box-sizing: border-box;
   padding: 12px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
   .gh-content {
     max-width: 1000px;
-    margin: 0 auto;
+    // margin: 0 auto;
     box-sizing: border-box;
-    padding: 8vmin 24px 8vmin;
+    // padding: 8vmin 24px 8vmin;
+    padding: 8vmin 0;
     border-radius: 6px;
     box-shadow: 0 2px 8px var(--card-shadow-color);
     transition: all 0.3s;
-    word-break: break-all;
+    // word-break: break-all;
+    & > * {
+      // overflow: auto;
+      word-break: break-word;
+    }
 
     &:hover {
       box-shadow: 0 4px 12px 12px rgba(7, 17, 27, 0.15);
+    }
+
+    #vcomments {
+      margin-top: 4vmin;
     }
   }
 
