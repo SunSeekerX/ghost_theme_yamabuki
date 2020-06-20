@@ -47,8 +47,8 @@
   "bugs": "https://github.com/TryGhost/Starter/issues",
   "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "autoprefixer": "9.8.0",
+    "@babel/core": "^7.10.3",
+    "autoprefixer": "9.8.1",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "cssnano": "4.1.10",
