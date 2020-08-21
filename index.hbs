@@ -1,15 +1,48 @@
 {{!< default}}
 
-<div class="gh-page">
+{{!-- <div class="gh-page">
     <div class="gh-container">
 
         <div class="gh-postfeed">
-        {{#foreach posts}}
+            {{#foreach posts}}
 
-            {{> "card"}} {{!-- partials/card.hbs --}}
+            {{> "card"}}
 
-        {{/foreach}}
+            {{/foreach}}
         </div>
 
+    </div>
+</div> --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 mx-auto">
+            {{#foreach posts}}
+
+            {{> "card"}}
+
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+<div class="pagination-area mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div class="post-pagination clearfix">
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col text-center">
+                            <p class="mb-0">Page 1 / 2</p>
+                        </div>
+                        <div class="col text-right">
+                            <p class="mb-0"><a href="/page/2/">Next</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

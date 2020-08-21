@@ -3,13 +3,13 @@
  * @author: SunSeekerX
  * @Date: 2020-06-15 17:22:31
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-08-21 15:48:42
+ * @LastEditTime: 2020-08-21 16:25:56
  */
 
 import config from '@/config/index'
 
-import { initBaiduTongji } from './Baidu'
-import { initValine } from './Comment'
+import { initBaiduTongji } from './utils/baidu'
+import { initValine } from './utils/comment'
 // import { loadScript, loadCSS, logDynamicLoadFiles } from '@/js/utils/index'
 
 /**
