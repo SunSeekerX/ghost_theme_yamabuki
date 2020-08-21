@@ -67,8 +67,8 @@ $color-base-background: #fff5e3;
     }
   }
 
-  p code,
-  li code {
+  p > code,
+  li > code {
     padding: 2px 4px;
     color: $color-code;
     background-color: $color-base-background;
