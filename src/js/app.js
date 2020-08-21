@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-06-15 17:22:31
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-06-17 23:41:59
+ * @LastEditTime: 2020-08-21 15:48:42
  */
 
 import config from '@/config/index'
@@ -45,7 +45,7 @@ $(document).ready(() => {
   }
 
   // 评论
-  if (config.valineOptions) {
+  if (config.valineOptions.open) {
     initValine(config.valineOptions)
   }
 })
