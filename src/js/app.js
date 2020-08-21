@@ -40,7 +40,7 @@ $(document).ready(() => {
   watchSiteLink()
 
   // 百度统计
-  if (config.baiduTongji) {
+  if (config.baiduTongji.open) {
     initBaiduTongji()
   }
 

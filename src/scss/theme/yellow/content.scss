@@ -1,0 +1,85 @@
+/**
+ * @name: 
+ * @author: SunSeekerX
+ * @Date: 2020-06-16 10:38:33
+ * @LastEditors: SunSeekerX
+ * @LastEditTime: 2020-08-21 15:04:16
+ */
+
+.gh-content-wrap {
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  .box {
+    padding: 8vmin 4vw;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+
+    .gh-content {
+      box-sizing: border-box;
+      word-break: break-all;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > blockquote,
+      & > ol,
+      & > ul,
+      & > dl,
+      & > p {
+        /* font-family: var(--font-serif); */
+        // font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.6em;
+      }
+
+      &  ul,
+      &  ol,
+      &  dl {
+        padding-left: 1.9em;
+      }
+    }
+
+    #vcomments {
+      margin-top: 4vmin;
+    }
+
+    @media (max-width: 650px) {
+      .gh-content blockquote,
+      .gh-content ol,
+      .gh-content ul,
+      .gh-content dl,
+      .gh-content p {
+        font-size: 1.6rem;
+      }
+
+      .gh-content blockquote::before {
+        left: -4vw;
+      }
+    }
+
+    @import './yellow';
+  }
+}
+
+@media (max-width: 1296px) {
+  .gh-content-wrap {
+    .box {
+      padding: 8vmin 4vw 8vmin;
+    }
+  }
+}
+
+@media (max-width: 778px) {
+  .gh-content-wrap {
+    .box {
+      padding: 8vmin 4vw 8vmin;
+    }
+  }
+}

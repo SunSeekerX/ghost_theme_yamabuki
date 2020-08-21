@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-06-16 10:38:33
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-06-18 00:04:34
+ * @LastEditTime: 2020-08-21 10:47:43
  */
 
 .gh-content-wrap {
@@ -15,16 +15,12 @@
 
   .gh-content {
     max-width: 1000px;
-    // margin: 0 auto;
     box-sizing: border-box;
-    // padding: 8vmin 24px 8vmin;
     padding: 8vmin 0;
     border-radius: 6px;
-    box-shadow: 0 2px 8px var(--card-shadow-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s;
-    // word-break: break-all;
     & > * {
-      // overflow: auto;
       word-break: break-word;
     }
 
@@ -37,14 +33,13 @@
     }
   }
 
-  @import './theme/greenery';
+  @import './yellow';
 }
 
 @media (max-width: 1296px) {
   .gh-content-wrap {
     .gh-content {
       padding: 8vmin 0 8vmin;
-      // margin: 0 4vmin;
     }
   }
 }

@@ -3,15 +3,19 @@
  * @author: SunSeekerX
  * @Date: 2020-05-24 12:24:52
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-05-31 12:43:44
+ * @LastEditTime: 2020-08-21 15:15:22
  */
 
 export default {
-  // baiduTongji: {
-  //   // 百度统计key
-  //   key: '3f0d7a82297c929467637543290d6e37',
-  // },
-  baiduTongji: false,
+  /**
+   * @name 百度统计配置
+   */
+  baiduTongji: {
+    open: true,
+    // 百度统计key
+    key: '3f0d7a82297c929467637543290d6e37',
+  },
+
   /**
    * @name valine配置
    * @more https://valine.js.org/configuration.html

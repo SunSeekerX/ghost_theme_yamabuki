@@ -1,8 +1,7 @@
 {
-  "name": "ghost-starter-theme",
+  "name": "yamabuki",
   "description": "A custom theme for ghost",
-  "demo": "https://starter.ghost.io",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -23,11 +22,6 @@
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
     "gc": "git add -A && git cz && git pull && git push"
   },
-  "author": {
-    "name": "Ghost Foundation",
-    "email": "hello@ghost.org",
-    "url": "https://ghost.org"
-  },
   "gpm": {
     "type": "theme",
     "categories": [
@@ -44,16 +38,14 @@
     "type": "git",
     "url": "https://github.com/TryGhost/Starter.git"
   },
-  "bugs": "https://github.com/TryGhost/Starter/issues",
-  "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "autoprefixer": "9.8.1",
+    "@babel/core": "^7.11.4",
+    "autoprefixer": "9.8.6",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "cssnano": "4.1.10",
     "cz-conventional-changelog": "3.2.0",
-    "gscan": "3.5.4",
+    "gscan": "3.5.6",
     "gulp": "4.0.2",
     "gulp-livereload": "4.0.2",
     "gulp-postcss": "8.0.0",
@@ -62,7 +54,7 @@
     "gulp-uglify": "3.0.2",
     "gulp-util": "3.0.8",
     "gulp-watch": "5.0.1",
-    "gulp-zip": "5.0.1",
+    "gulp-zip": "5.0.2",
     "postcss-color-function": "4.1.0",
     "postcss-custom-properties": "9.1.1",
     "postcss-easy-import": "3.0.0",
