@@ -1,6 +1,6 @@
 # Ghost Theme Yamabuki
 
-`Ghost blog`主题。
+`Ghost blog`主题。参考：[PrimulaGhost](https://themeix.com/livedemo?theme=PrimulaGhost)
 
 预览：[https://yoouu.cn/](https://yoouu.cn/)
 

@@ -22,3 +22,8 @@ projectFilesBackup
 .DS_Store
 
 dist/
+
+# another files
+package-lock.json
+yarn.lock
+

@@ -44,7 +44,6 @@
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "cssnano": "4.1.10",
-    "cz-conventional-changelog": "3.2.0",
     "gscan": "3.5.6",
     "gulp": "4.0.2",
     "gulp-livereload": "4.0.2",
@@ -84,9 +83,6 @@
       "xl": {
         "width": 2000
       }
-    },
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
