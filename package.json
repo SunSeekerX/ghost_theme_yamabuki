@@ -20,7 +20,7 @@
     "pretest": "cross-env NODE_ENV=production gulp build",
     "preship": "cross-env NODE_ENV=production yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
-    "gc": "git add -A && git cz && git pull && git push"
+    "gc": "git add -A && git-cz && git pull && git push"
   },
   "gpm": {
     "type": "theme",
