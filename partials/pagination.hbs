@@ -1,28 +1,32 @@
-<div class="site-pagination">
-  <div class="d-none" aria-hidden="true">
-    <span class="curr-page">{{page}}</span>
-    <span class="total-pages">{{pages}}</span>
+<div class="pagination-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <div class="post-pagination clearfix">
+          <div class="row">
+            {{#if prev}}
+              <div class="col">
+                <p><a href="{{page_url prev}}">Prev</a></p>
+              </div>
+            {{else}}
+              <div class="col">
+              </div>
+            {{/if}}
+
+            <div class="col" style="text-align: center;">
+              <p class="mb-0">Page {{page}} / {{pages}}</p>
+            </div>
+            {{#if next}}
+              <div class="col" style="text-align: right;">
+                <p class="mb-0"><a href="{{page_url next}}">Next</a></p>
+              </div>
+            {{else}}
+              <div class="col">
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <nav aria-label="文章分页">
-    <ul class="pagination">
-      {{#if prev}}
-      <li class="page-item">
-        <a class="page-link" href="{{page_url prev}}" aria-label="上一页" title="上一页">
-          <span aria-hidden="true">
-            <i class="fas fa-angle-left"></i>
-          </span>
-        </a>
-      </li>
-      {{/if}}
-      {{#if next}}
-      <li class="page-item">
-        <a class="page-link" href="{{page_url next}}" aria-label="下一页" title="下一页">
-          <span aria-hidden="true">
-            <i class="fas fa-angle-right"></i>
-          </span>
-        </a>
-      </li>
-      {{/if}}
-    </ul>
-  </nav>
 </div>
