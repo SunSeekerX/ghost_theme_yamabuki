@@ -22,6 +22,11 @@
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
     "gc": "git add -A && git-cz && git pull && git push"
   },
+  "author": {
+    "name": "SunSeekerX",
+    "email": "1647800606@qq.com",
+    "url": "https://yoouu.cn/"
+  },
   "gpm": {
     "type": "theme",
     "categories": [
