@@ -1,23 +1,10 @@
-{{!--
-Re-usable card for linking to posts
---}}
-
-{{!-- <article class="gh-card {{post_class}}">
-    <a class="gh-card-link" href="{{url}}">
-        <div class="gh-card-content">
-            <span class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-            <h2 class="gh-card-title">{{title}}</h2>
-            <p>{{excerpt}}</p>
-            <strong>Read more</strong>
-        </div>
-    </a>
-</article> --}}
-
-
-<article class="blog-list {{post_class}}">
+<article data-aos="fade-in" data-aos-offset="100" class="blog-list {{post_class}}">
     <div class="list-block">
-        <span class="list-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-        </span>
+        {{!-- <span class="list-card-meta"><time
+                datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></span> --}}
+
+        <span class="list-card-meta"><time
+                datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD HH:SS"}}</time></span>
 
         <h2>
             <a class="list-card-link" href="{{url}}">
@@ -27,6 +14,6 @@ Re-usable card for linking to posts
 
         <p>{{excerpt}}</p>
 
-        <div class="btn-read"><a href="/is-dribbble-worth-your-time/">Read More</a></div>
+        {{!-- <div class="btn-read"><a href="{{url}}">阅读更多</a></div> --}}
     </div>
 </article>

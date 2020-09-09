@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-05-24 12:24:52
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-08-21 15:48:29
+ * @LastEditTime: 2020-09-09 16:29:58
  */
 
 export default {
@@ -12,7 +12,8 @@ export default {
    */
   baiduTongji: {
     // 是否打开
-    open: true,
+    // open: true,
+    open: false,
     // 百度统计key
     key: '3f0d7a82297c929467637543290d6e37',
   },
@@ -23,7 +24,8 @@ export default {
    */
   valineOptions: {
     // 是否打开
-    open: true,
+    // open: true,
+    open: false,
     // Valine 的初始化挂载器。可以是一个CSS 选择器，也可以是一个实际的HTML元素。
     el: '#vcomments',
     // leancloud 应用 appid

@@ -8,8 +8,10 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{!-- bootstrap-4.5.2-dist --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "static/libs/bootstrap-4.5.2-dist/css/bootstrap-grid.min.css"}}" />
+    <link rel="stylesheet" type="text/css"
+        href="{{asset "static/libs/bootstrap-4.5.2-dist/css/bootstrap-grid.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "static/libs/aos/aos.css"}}" />
     {{#is "post"}}
     {{!-- prismjs --}}
     <link rel="stylesheet" type="text/css" href="{{asset "static/libs/prismjs/prism.css"}}" />
@@ -26,13 +28,11 @@
 </head>
 
 {{!-- 添加line-numbers为所有代码块添加行号 --}}
-
 <body class="{{body_class}} line-numbers">
     <div class="gh-viewport">
 
         <header id="gh-head" class="gh-head">
             <nav class="gh-head-inner gh-container">
-
                 <div class="gh-head-brand">
                     <a class="gh-head-logo" href="{{@site.url}}">
                         {{#if @site.logo}}
@@ -81,23 +81,22 @@
                 </div>
 
                 <div class="gh-foot-meta">
-                    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">湘ICP备19015624号</a> Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">湘ICP备19015624号</a>
+                    Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
                 </div>
             </div>
         </footer>
 
     </div>
 
-    {{!-- <foot> --}}
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     {{#if pagination.pages}}
-    <script>
+    {{!-- <script>
         var maxPages = parseInt('{{pagination.pages}}');
     </script>
-    <script src="{{asset "built/infinitescroll.js"}}"></script>
+    <script src="{{asset "built/infinitescroll.js"}}"></script> --}}
     {{/if}}
 
     <script>
@@ -138,6 +137,7 @@
     {{/is}}
 
     {{!-- custom app.js --}}
+    <script src="{{asset "static/libs/aos/aos.js"}}"></script>
     <script src="{{asset "built/app.js"}}"></script>
 
     {{ghost_foot}}

@@ -12,18 +12,19 @@
         </div>
 
     </div>
-</div> --}}
+</div> --}}{{!--  --}}
 
 <div class="container">
     <div class="row">
         <div class="col-lg-12 mx-auto">
             {{#foreach posts}}
-
             {{> "card"}}
-
             {{/foreach}}
         </div>
     </div>
+
+    {{!-- {{pagination}} --}}
+    {{"pagination"}}
 </div>
 
 <div class="pagination-area mt-5">
