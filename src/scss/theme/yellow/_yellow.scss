@@ -1,13 +1,20 @@
 .gh-content {
   letter-spacing: 0.05em;
   color: $color-content;
-  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
-    'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria,
+    Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  img {
+    align-self: flex-start;
+  }
 
   h1,
   h2,
   h3,
   h4 {
+    padding-left: 6px;
+    padding-right: 6px;
+    align-self: flex-start;
     font-weight: bold;
     color: $color-title;
     background: linear-gradient(#fff 60%, $color-base 40%);
@@ -17,6 +24,8 @@
       background-color: rgba(27, 31, 35, 0.05);
       word-break: break-all;
       border-radius: 6px;
+      font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+      word-break: break-all;
     }
   }
 
@@ -28,9 +37,7 @@
   blockquote {
     width: 100%;
     font-style: normal;
-    // margin: 10px 5px;
     border-left: 3px solid $color-base;
-    // border-right: 0px solid #35b378;
     color: #595959;
     quotes: none;
     background: $color-base-background;
@@ -61,10 +68,56 @@
 
   p > code,
   li > code {
-    padding: 2px 4px;
+    padding: 2px 6px;
     color: $color-code;
     background-color: $color-base-background;
     border-radius: 6px;
+    font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+    word-break: break-all;
+  }
+
+  & > pre {
+    width: 100%;
+    border-radius: 5px;
+    background: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+    // overflow: auto;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      background: url(/assets/static/imgs/point.png);
+      height: 30px;
+      width: 100%;
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-color: #2d2d2d;
+      margin-bottom: -7px;
+      border-radius: 5px;
+      background-position: 10px 10px;
+    }
+
+    & > code {
+      display: block;
+      // padding: 2em;
+      padding: 1em;
+      margin: .5em 0;
+      color: #ccc;
+      background: none;
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      // word-wrap: break-word;
+      // word-break: break-all;
+      line-height: 1.5;
+      tab-size: 4;
+      hyphens: none;
+      overflow: auto;
+    }
   }
 
   .code-toolbar {
@@ -78,7 +131,7 @@
     &:before {
       content: '';
       display: block;
-      background: url(https://my-wechat.mdnice.com/point.png);
+      background: url(/assets/static/imgs/point.png);
       height: 30px;
       width: 100%;
       background-size: 40px;
@@ -126,12 +179,20 @@
     .code-toolbar {
       font-size: 1.8rem;
     }
+
+    & > pre {
+      font-size: 1.8rem;
+    }
   }
 }
 
 @media (max-width: 778px) {
   .gh-content {
     .code-toolbar {
+      font-size: 1.4rem;
+    }
+
+    & > pre {
       font-size: 1.4rem;
     }
   }

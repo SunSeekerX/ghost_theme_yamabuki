@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-06-16 10:38:33
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-09-09 22:50:57
+ * @LastEditTime: 2021-01-04 16:41:57
  */
 
 $color-title: #515151;
@@ -205,13 +205,6 @@ $color-base-background: #fff5e3;
         opacity: 0;
       }
     }
-    // .blog-list:before {
-
-    // }
-
-    // .blog-list:after {
-    //   opacity: 0;
-    // }
   }
 }
 
@@ -264,7 +257,6 @@ $color-base-background: #fff5e3;
       word-break: break-all;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
 
       & > blockquote,
       & > ol,
@@ -302,7 +294,7 @@ $color-base-background: #fff5e3;
       }
     }
 
-    @import './yellow';
+    @import 'yellow';
   }
 }
 @media (max-width: 1296px) {
