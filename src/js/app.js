@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-06-15 17:22:31
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2020-09-09 16:47:24
+ * @LastEditTime: 2021-01-04 22:09:46
  */
 
 import config from '@/config/index'
@@ -36,7 +36,7 @@ $(document).ready(() => {
   watchSiteLink()
 
   // 动画初始化
-  AOS.init();
+  AOS.init()
 
   // 百度统计
   if (config.baiduTongji.open) {

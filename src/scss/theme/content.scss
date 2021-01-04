@@ -3,7 +3,7 @@
  * @author: SunSeekerX
  * @Date: 2020-06-16 10:38:33
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2021-01-04 16:41:57
+ * @LastEditTime: 2021-01-04 22:26:13
  */
 
 $color-title: #515151;
@@ -13,15 +13,10 @@ $color-code: #9b6e23;
 $color-a: #dda52d;
 $color-a-hover: #f9bf45;
 $color-base-background: #fff5e3;
+$code-font: Operator Mono, Consolas, Monaco, Menlo, monospace;
 
 // 首页
 .container {
-  *,
-  ::after,
-  ::before {
-    box-sizing: border-box;
-  }
-
   .blog-list {
     color: #404040;
     position: relative;
@@ -247,13 +242,11 @@ $color-base-background: #fff5e3;
     padding: 8vmin 4vw;
     max-width: 1000px;
     width: 100%;
-    box-sizing: border-box;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s;
 
     .gh-content {
-      box-sizing: border-box;
       word-break: break-all;
       display: flex;
       flex-direction: column;
@@ -262,10 +255,12 @@ $color-base-background: #fff5e3;
       & > ol,
       & > ul,
       & > dl,
-      & > p {
+      & > p,
+      & > pre,
+      & > .code-toolbar {
         /* font-family: var(--font-serif); */
         // font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.6em;
       }
 
@@ -273,6 +268,9 @@ $color-base-background: #fff5e3;
       & ol,
       & dl {
         padding-left: 1.9em;
+      }
+      img {
+        zoom: 1 !important;
       }
     }
 
@@ -285,7 +283,9 @@ $color-base-background: #fff5e3;
       .gh-content ol,
       .gh-content ul,
       .gh-content dl,
-      .gh-content p {
+      .gh-content p,
+      .gh-content pre,
+      .gh-content .code-toolbar {
         font-size: 1.6rem;
       }
 
@@ -295,19 +295,5 @@ $color-base-background: #fff5e3;
     }
 
     @import 'yellow';
-  }
-}
-@media (max-width: 1296px) {
-  .gh-content-wrap {
-    .box {
-      padding: 8vmin 4vw 8vmin;
-    }
-  }
-}
-@media (max-width: 778px) {
-  .gh-content-wrap {
-    .box {
-      padding: 8vmin 4vw 8vmin;
-    }
   }
 }

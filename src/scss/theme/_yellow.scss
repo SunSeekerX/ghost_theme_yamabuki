@@ -22,10 +22,9 @@
     code {
       color: $color-title;
       background-color: rgba(27, 31, 35, 0.05);
-      word-break: break-all;
+      word-break: normal;
       border-radius: 6px;
-      font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
-      word-break: break-all;
+      font-family: $code-font;
     }
   }
 
@@ -72,8 +71,8 @@
     color: $color-code;
     background-color: $color-base-background;
     border-radius: 6px;
-    font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
-    word-break: break-all;
+    font-family: $code-font;
+    word-break: normal;
   }
 
   & > pre {
@@ -105,7 +104,7 @@
       margin: .5em 0;
       color: #ccc;
       background: none;
-      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-family: $code-font;
       text-align: left;
       white-space: pre;
       word-spacing: normal;
@@ -125,8 +124,8 @@
     border-radius: 5px;
     background: #2d2d2d;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;
-    font-size: 2rem;
-    overflow: auto;
+    // font-size: 2em;
+    // overflow: auto;
 
     &:before {
       content: '';
@@ -169,31 +168,30 @@
   }
 
   img {
-    // border-radius: 6px;
     box-shadow: #ccc 0 10px 15px;
   }
 }
 
-@media (max-width: 1296px) {
-  .gh-content {
-    .code-toolbar {
-      font-size: 1.8rem;
-    }
+// @media (max-width: 1296px) {
+//   .gh-content {
+//     .code-toolbar {
+//       font-size: 1.8rem;
+//     }
 
-    & > pre {
-      font-size: 1.8rem;
-    }
-  }
-}
+//     & > pre {
+//       font-size: 1.8rem;
+//     }
+//   }
+// }
 
-@media (max-width: 778px) {
-  .gh-content {
-    .code-toolbar {
-      font-size: 1.4rem;
-    }
+// @media (max-width: 778px) {
+//   .gh-content {
+//     .code-toolbar {
+//       font-size: 1.4rem;
+//     }
 
-    & > pre {
-      font-size: 1.4rem;
-    }
-  }
-}
+//     & > pre {
+//       font-size: 1.4rem;
+//     }
+//   }
+// }
