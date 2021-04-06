@@ -3,17 +3,22 @@
  * @author: SunSeekerX
  * @Date: 2020-06-16 10:38:33
  * @LastEditors: SunSeekerX
- * @LastEditTime: 2021-01-04 22:37:20
+ * @LastEditTime: 2021-04-06 14:47:47
  */
+
+$color-base: #ffb11b;
+$color-base-background: #fff5e3;
+$color-base-disabled: #fff5ce;
 
 $color-title: #515151;
 $color-content: #3a3a3a;
-$color-base: #ffb11b;
 $color-code: #9b6e23;
 $color-a: #dda52d;
 $color-a-hover: #f9bf45;
-$color-base-background: #fff5e3;
+
 $code-font: Operator Mono, Consolas, Monaco, Menlo, monospace;
+$normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria,
+  Cochin, Georgia, Times, 'Times New Roman', serif;
 
 // 首页
 .container {
@@ -271,6 +276,7 @@ $code-font: Operator Mono, Consolas, Monaco, Menlo, monospace;
       }
       img {
         zoom: 1 !important;
+        height: auto;
       }
     }
 
