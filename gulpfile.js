@@ -139,7 +139,8 @@ function customJs(done) {
 function zipper(done) {
   var targetDir = 'dist/'
   var themeName = require('./package.json').name
-  var filename = themeName + '.zip'
+  var themeVersion = require('./package.json').version
+  var filename = `${themeName}-${themeVersion}.zip`
 
   pump(
     [
