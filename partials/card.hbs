@@ -1,19 +1,17 @@
 <article data-aos="fade-in" data-aos-offset="50" class="blog-list {{post_class}}">
     <div class="list-block">
-        {{!-- <span class="list-card-meta"><time
-                datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></span> --}}
+        <span class="list-card-meta">
+            <time datetime="{{date format=" YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time>
 
-        <span class="list-card-meta"><time
-                datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></span>
+            {{#is "index"}}
+                <span class="list-card-tag">{{tags}}</span>
+            {{/is}}
+        </span>
 
         <h2>
-            <a class="list-card-link" href="{{url}}">
-                {{title}}
-            </a>
+            <a class="list-card-link" href="{{url}}">{{title}}</a>
         </h2>
 
         <p>{{excerpt}}</p>
-
-        {{!-- <div class="btn-read"><a href="{{url}}">阅读更多</a></div> --}}
     </div>
 </article>
