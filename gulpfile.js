@@ -1,6 +1,3 @@
-/**
- * @name 引入node核心模块
- */
 const fs = require('fs')
 const path = require('path')
 
@@ -41,10 +38,7 @@ const handleError = (done) => {
 }
 
 function hbs(done) {
-  pump(
-    [src(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs']), livereload()],
-    handleError(done)
-  )
+  pump([src(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs']), livereload()], handleError(done))
 }
 
 function css(done) {
@@ -154,8 +148,7 @@ function zipper(done) {
 
 const cssWatcher = () => watch('assets/css/**', css)
 const scssWatcher = () => watch('src/scss/**', scss)
-const hbsWatcher = () =>
-  watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs)
+const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs)
 const jsWatcher = () => watch('src/js/*.js', customJs)
 
 const watcher = parallel(cssWatcher, hbsWatcher, scssWatcher, jsWatcher)

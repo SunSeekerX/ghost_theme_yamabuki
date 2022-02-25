@@ -4,8 +4,6 @@
 
 预览：[https://yoouu.cn/](https://yoouu.cn/)
 
-
-
 ## 使用
 
 需要有`node.js`和`npm`基础知识
@@ -18,19 +16,15 @@ git clone https://github.com/SunSeekerX/ghost-theme-yamabuki
 
 ### 安装依赖
 
-进入项目的根目录执行
+进入项目的根目录执行,已经配置国内镜像，理论不需要任何代理安装也能起飞
 
 ```bash
 yarn
-# or npm
-npm i 
 ```
 
-###  替换配置信息
+### 替换配置信息
 
 本主题有两个配置信息，分别在`${app}/src/config/index`，`${app}/src/config/build`
-
-
 
 `${app}/src/config/index`
 
@@ -75,10 +69,7 @@ export default {
     recordIP: true,
   },
 }
-
 ```
-
-
 
 `~~${app}/src/config/build`~~
 
@@ -109,33 +100,23 @@ module.exports = {
 }
 ```
 
-
-
 ### 编译打包
 
 项目根目录下执行
 
 ```bash
 yarn zip
-# or npm
-npm run zip
 ```
-
-
 
 ### 上传主题
 
 打包之后的文件位于`${app}/dist/`，通过`ghost`后台上传即可。
 
-
-
 ## 开发
 
 到你上传主题的根目录下，删除所有文件，把本项目所有文件替换到主题目录下。即可开始开发。
 
-
-
-使用Gulp/PostCSS编译样式以满足未来的CSS规范。你需要全局安装 [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) 和[Gulp](https://gulpjs.com)。 然后进入主题根目录执行:
+使用 Gulp/PostCSS 编译样式以满足未来的 CSS 规范。你需要全局安装 [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) 和[Gulp](https://gulpjs.com)。 然后进入主题根目录执行:
 
 ```bash
 # 安装依赖
@@ -145,8 +126,6 @@ yarn
 $ yarn server
 ```
 
-
-
 ### ~~主题内需要替换的模板字符串~~
 
 ~~`default.hbs`~~
@@ -154,9 +133,6 @@ $ yarn server
 ~~$siteRecord.url$ - 备案信息链接地址~~
 
 ~~$siteRecord.name$ - 备案显示名字~~
-
-
-
 
 # Copyright & License
 
