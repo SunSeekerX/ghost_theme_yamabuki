@@ -11,7 +11,7 @@ const isDev = NODE_ENV === 'development'
 // gulp plugins and utils
 var livereload = require('gulp-livereload')
 var postcss = require('gulp-postcss')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 var zip = require('gulp-zip')
 var uglify = require('gulp-uglify')
 var beeper = require('beeper')
@@ -21,7 +21,7 @@ var autoprefixer = require('autoprefixer')
 var colorFunction = require('postcss-color-function')
 var cssnano = require('cssnano')
 var customProperties = require('postcss-custom-properties')
-var easyimport = require('postcss-easy-import')
+var easyImport = require('postcss-easy-import')
 
 function serve(done) {
   livereload.listen()
@@ -43,7 +43,7 @@ function hbs(done) {
 
 function css(done) {
   var processors = [
-    easyimport,
+    easyImport,
     customProperties({ preserve: false }),
     colorFunction(),
     autoprefixer(),
@@ -63,7 +63,7 @@ function css(done) {
 
 function scss(done) {
   const processors = [
-    easyimport,
+    easyImport,
     customProperties({ preserve: false }),
     colorFunction(),
     autoprefixer(),

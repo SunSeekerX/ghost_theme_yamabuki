@@ -1,7 +1,7 @@
 {
   "name": "yamabuki",
   "description": "A custom theme for ghost",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
@@ -63,6 +63,7 @@
     "postcss-color-function": "4.1.0",
     "postcss-custom-properties": "12.1.4",
     "postcss-easy-import": "3.0.0",
+    "sass": "^1.49.9",
     "webpack-stream": "^6.1.2"
   },
   "browserslist": [

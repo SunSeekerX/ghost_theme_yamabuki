@@ -52,5 +52,11 @@ module.exports = {
         tabWidth: 2,
       },
     },
+    {
+      files: '*.hbs',
+      options: {
+        singleQuote: false,
+      },
+    },
   ],
 }

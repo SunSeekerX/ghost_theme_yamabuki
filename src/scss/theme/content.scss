@@ -16,9 +16,25 @@ $color-code: #9b6e23;
 $color-a: #dda52d;
 $color-a-hover: #f9bf45;
 
-$code-font: Operator Mono, Consolas, Monaco, Menlo, monospace;
-$normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria,
-  Cochin, Georgia, Times, 'Times New Roman', serif;
+$code-font: Operator Mono, Consolas, Monaco, Menlo, monospace, Optima-Regular, Optima, PingFangSC-light,
+  PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+$normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times,
+  "Times New Roman", serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  text-shadow: 0px 0px 1px #acacac;
+  &::selection {
+    text-shadow: 0px 0px 1px #acacac;
+  }
+}
 
 // 首页
 .container {
@@ -43,7 +59,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
       font-size: 35px;
     }
     &:after {
-      content: '';
+      content: "";
       border: 2px solid #fe6061;
       position: absolute;
       left: -63px;
@@ -56,7 +72,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(1) {
       $color: #fe6061;
       &:before {
-        content: '1';
+        content: "1";
         background-color: $color;
       }
       &:after {
@@ -74,7 +90,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(2) {
       $color: #d2a9fc;
       &:before {
-        content: '2';
+        content: "2";
         background-color: $color;
       }
       &:after {
@@ -88,7 +104,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(3) {
       $color: #f8d86b;
       &:before {
-        content: '3';
+        content: "3";
         background-color: $color;
       }
       &:after {
@@ -102,7 +118,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(4) {
       $color: #74cee7;
       &:before {
-        content: '4';
+        content: "4";
         background-color: $color;
       }
       &:after {
@@ -116,7 +132,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(5) {
       $color: #8acbff;
       &:before {
-        content: '5';
+        content: "5";
         background-color: $color;
       }
       &:after {
@@ -130,7 +146,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(6) {
       $color: #55efc4;
       &:before {
-        content: '6';
+        content: "6";
         background-color: $color;
       }
       &:after {
@@ -144,7 +160,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(7) {
       $color: #9494dc;
       &:before {
-        content: '7';
+        content: "7";
         background-color: $color;
       }
       &:after {
@@ -157,7 +173,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(8) {
       $color: #8c949a;
       &:before {
-        content: '8';
+        content: "8";
         background-color: $color;
       }
       &:after {
@@ -171,7 +187,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(9) {
       $color: #e487a3;
       &:before {
-        content: '9';
+        content: "9";
         background-color: $color;
       }
       &:after {
@@ -185,7 +201,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
     &:nth-child(10) {
       $color: #d7c6d4;
       &:before {
-        content: '9';
+        content: "10";
         background-color: $color;
       }
       &:after {
@@ -224,7 +240,7 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
           padding: 0 6px;
         }
 
-        .list-card-tag a:hover{
+        .list-card-tag a:hover {
           text-decoration: underline;
         }
       }
@@ -339,7 +355,9 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
         /* font-family: var(--font-serif); */
         // font-weight: 400;
         font-size: 1.8rem;
-        line-height: 1.6em;
+        // line-height: 1.6em;
+        line-height: 2em;
+        font-weight: 500;
       }
 
       & ul,
@@ -373,6 +391,6 @@ $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingF
       }
     }
 
-    @import 'yellow';
+    @import "yellow";
   }
 }

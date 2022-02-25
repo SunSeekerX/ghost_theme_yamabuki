@@ -41,7 +41,8 @@ html,
 }
 
 .gh-page {
-  padding: 0 4vw;
+  /* 2022-02-25 21:23:03 注释，在手机端有更好的效果 */
+  /* padding: 0 4vw; */
 }
 
 .gh-article {
@@ -178,6 +179,7 @@ html,
 
 .gh-excerpt {
   margin: 1.5rem 0 0 0;
+  padding: 0 8vmin;
 }
 
 .gh-feature-image {

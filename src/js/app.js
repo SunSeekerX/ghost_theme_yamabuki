@@ -1,11 +1,3 @@
-/**
- * @name:
- * @author: SunSeekerX
- * @Date: 2020-06-15 17:22:31
- * @LastEditors: SunSeekerX
- * @LastEditTime: 2021-01-05 16:39:48
- */
-
 import config from '@/config/index'
 
 import { initBaiduTongji } from './utils/baidu'
