@@ -29,7 +29,12 @@ h5,
 h6,
 p,
 a,
-span {
+span,
+ul,
+ol,
+li,
+th,
+td {
   text-shadow: 0px 0px 1px #acacac;
   &::selection {
     text-shadow: 0px 0px 1px #acacac;
