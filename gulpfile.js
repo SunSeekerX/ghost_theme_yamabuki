@@ -9,19 +9,19 @@ const NODE_ENV = process.env.NODE_ENV
 const isDev = NODE_ENV === 'development'
 
 // gulp plugins and utils
-var livereload = require('gulp-livereload')
-var postcss = require('gulp-postcss')
+const livereload = require('gulp-livereload')
+const postcss = require('gulp-postcss')
 const sass = require('gulp-sass')(require('sass'))
-var zip = require('gulp-zip')
-var uglify = require('gulp-uglify')
-var beeper = require('beeper')
+const zip = require('gulp-zip')
+const uglify = require('gulp-uglify')
+const beeper = require('beeper')
 
 // postcss plugins
-var autoprefixer = require('autoprefixer')
-var colorFunction = require('postcss-color-function')
-var cssnano = require('cssnano')
-var customProperties = require('postcss-custom-properties')
-var easyImport = require('postcss-easy-import')
+const autoprefixer = require('autoprefixer')
+const colorFunction = require('postcss-color-function')
+const cssnano = require('cssnano')
+const customProperties = require('postcss-custom-properties')
+const easyImport = require('postcss-easy-import')
 
 function serve(done) {
   livereload.listen()

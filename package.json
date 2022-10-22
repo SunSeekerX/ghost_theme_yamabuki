@@ -1,76 +1,116 @@
 {
   "name": "yamabuki",
-  "description": "A custom theme for ghost",
   "version": "0.2.1",
-  "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v4"
-  },
-  "license": "MIT",
-  "screenshots": {
-    "desktop": "assets/screenshot-desktop.jpg"
-  },
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development gulp",
-    "serve": "cross-env NODE_ENV=development gulp",
-    "build:static": "cross-env NODE_ENV=production gulp build",
-    "zip": "cross-env NODE_ENV=production gulp zip",
-    "test": "cross-env NODE_ENV=production gscan .",
-    "test:ci": "cross-env NODE_ENV=production gscan --fatal --verbose .",
-    "pretest": "cross-env NODE_ENV=production gulp build",
-    "preship": "cross-env NODE_ENV=production yarn test",
-    "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
-    "gc": "git add -A && git-cz && git pull && git push"
-  },
-  "author": {
-    "name": "SunSeekerX",
-    "email": "1647800606@qq.com",
-    "url": "https://yoouu.cn/"
-  },
-  "gpm": {
-    "type": "theme",
-    "categories": [
-      "Minimal",
-      "Magazine"
-    ]
-  },
+  "description": "A custom theme for ghost",
   "keywords": [
     "ghost",
     "theme",
     "ghost-theme"
   ],
+  "bugs": "https://github.com/SunSeekerX/ghost-theme-yamabuki/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/SunSeekerX/ghost-theme-yamabuki"
   },
-  "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "autoprefixer": "10.4.2",
-    "babel-loader": "^8.2.3",
-    "cross-env": "^7.0.3",
-    "cssnano": "5.0.17",
-    "gscan": "4.22.0",
-    "gulp": "4.0.2",
-    "gulp-livereload": "4.0.2",
-    "gulp-postcss": "9.0.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-uglify": "3.0.2",
-    "gulp-util": "3.0.8",
-    "gulp-watch": "5.0.1",
-    "gulp-zip": "5.1.0",
-    "postcss": "^8.4.7",
-    "postcss-color-function": "4.1.0",
-    "postcss-custom-properties": "12.1.4",
-    "postcss-easy-import": "3.0.0",
-    "sass": "^1.49.9",
-    "webpack-stream": "^6.1.2"
+  "license": "MIT",
+  "author": {
+    "name": "SunSeekerX",
+    "email": "1647800606@qq.com",
+    "url": "https://yoouu.cn/"
   },
-  "browserslist": [
-    "defaults"
-  ],
+  "scripts": {
+    "build:static": "cross-env NODE_ENV=production gulp build",
+    "dev": "cross-env NODE_ENV=development gulp",
+    "gc": "git add -A && git-cz && git pull && git push",
+    "serve": "cross-env NODE_ENV=development gulp",
+    "preship": "cross-env NODE_ENV=production yarn test",
+    "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+    "postship": "cross-env NODE_ENV=production && git fetch && gulp release",
+    "pretest": "cross-env NODE_ENV=production gulp build",
+    "test": "cross-env NODE_ENV=production gscan .",
+    "test:ci": "cross-env NODE_ENV=production gscan --fatal --verbose .",
+    "zip": "cross-env NODE_ENV=production gulp zip"
+  },
   "config": {
-    "posts_per_page": 10,
+    "card_assets": true,
+    "custom": {
+      "title_font": {
+        "type": "select",
+        "options": [
+          "Modern sans-serif",
+          "Elegant serif"
+        ],
+        "default": "Modern sans-serif"
+      },
+      "body_font": {
+        "type": "select",
+        "options": [
+          "Modern sans-serif",
+          "Elegant serif"
+        ],
+        "default": "Elegant serif"
+      },
+      "show_publication_cover": {
+        "type": "boolean",
+        "default": true,
+        "group": "homepage"
+      },
+      "header_style": {
+        "type": "select",
+        "options": [
+          "Center aligned",
+          "Left aligned",
+          "Hidden"
+        ],
+        "default": "Center aligned",
+        "group": "homepage"
+      },
+      "show_logo_in_navigation": {
+        "type": "boolean",
+        "default": false,
+        "group": "homepage"
+      },
+      "feed_layout": {
+        "type": "select",
+        "options": [
+          "Classic",
+          "Grid",
+          "List"
+        ],
+        "default": "Classic",
+        "group": "homepage"
+      },
+      "color_scheme": {
+        "type": "select",
+        "options": [
+          "Light",
+          "Dark",
+          "Auto"
+        ],
+        "default": "Light"
+      },
+      "post_image_style": {
+        "type": "select",
+        "options": [
+          "Wide",
+          "Full",
+          "Small",
+          "Hidden"
+        ],
+        "default": "Wide",
+        "group": "post"
+      },
+      "email_signup_text": {
+        "type": "text",
+        "default": "Sign up for more like this.",
+        "group": "post"
+      },
+      "show_recent_posts_footer": {
+        "type": "boolean",
+        "default": true,
+        "group": "post"
+      }
+    },
     "image_sizes": {
       "xxs": {
         "width": 30
@@ -85,12 +125,65 @@
         "width": 600
       },
       "l": {
-        "width": 1200
+        "width": 1000
       },
       "xl": {
         "width": 2000
       }
-    }
+    },
+    "posts_per_page": 10
   },
-  "packageManager": "yarn@3.2.0"
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@tryghost/release-utils": "0.8.1",
+    "@babel/core": "^7.17.5",
+    "autoprefixer": "10.4.7",
+    "beeper": "2.1.0",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "cssnano": "5.1.12",
+    "gscan": "4.34.0",
+    "gulp": "4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-livereload": "4.0.2",
+    "gulp-postcss": "9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-uglify": "3.0.2",
+    "gulp-util": "3.0.8",
+    "gulp-watch": "5.0.1",
+    "gulp-zip": "5.1.0",
+    "inquirer": "8.2.4",
+    "postcss": "^8.4.7",
+    "postcss-color-mod-function": "3.0.3",
+    "postcss-color-function": "4.1.0",
+    "postcss-custom-properties": "12.1.4",
+    "postcss-easy-import": "3.0.0",
+    "pump": "3.0.0",
+    "sass": "^1.49.9",
+    "webpack-stream": "^6.1.2"
+  },
+  "packageManager": "yarn@3.2.4",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "demo": "https://yoouu.cn/",
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "@tryghost:theme"
+    ]
+  },
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  }
 }
