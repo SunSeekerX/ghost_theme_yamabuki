@@ -1,6 +1,6 @@
 {
   "name": "yamabuki",
-  "version": "0.2.1",
+  "version": "0.5.0",
   "description": "A custom theme for ghost",
   "keywords": [
     "ghost",
@@ -33,84 +33,6 @@
   },
   "config": {
     "card_assets": true,
-    "custom": {
-      "title_font": {
-        "type": "select",
-        "options": [
-          "Modern sans-serif",
-          "Elegant serif"
-        ],
-        "default": "Modern sans-serif"
-      },
-      "body_font": {
-        "type": "select",
-        "options": [
-          "Modern sans-serif",
-          "Elegant serif"
-        ],
-        "default": "Elegant serif"
-      },
-      "show_publication_cover": {
-        "type": "boolean",
-        "default": true,
-        "group": "homepage"
-      },
-      "header_style": {
-        "type": "select",
-        "options": [
-          "Center aligned",
-          "Left aligned",
-          "Hidden"
-        ],
-        "default": "Center aligned",
-        "group": "homepage"
-      },
-      "show_logo_in_navigation": {
-        "type": "boolean",
-        "default": false,
-        "group": "homepage"
-      },
-      "feed_layout": {
-        "type": "select",
-        "options": [
-          "Classic",
-          "Grid",
-          "List"
-        ],
-        "default": "Classic",
-        "group": "homepage"
-      },
-      "color_scheme": {
-        "type": "select",
-        "options": [
-          "Light",
-          "Dark",
-          "Auto"
-        ],
-        "default": "Light"
-      },
-      "post_image_style": {
-        "type": "select",
-        "options": [
-          "Wide",
-          "Full",
-          "Small",
-          "Hidden"
-        ],
-        "default": "Wide",
-        "group": "post"
-      },
-      "email_signup_text": {
-        "type": "text",
-        "default": "Sign up for more like this.",
-        "group": "post"
-      },
-      "show_recent_posts_footer": {
-        "type": "boolean",
-        "default": true,
-        "group": "post"
-      }
-    },
     "image_sizes": {
       "xxs": {
         "width": 30
