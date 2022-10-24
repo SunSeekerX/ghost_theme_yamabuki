@@ -1,20 +1,9 @@
-/*
-
-This is a development CSS file which is compiled to a minified
-production stylesheet in assets/built/screen.css using: gulp dev
-
-*/
-
-/* Lib - Local component imports
-/* ---------------------------------------------------------- */
-
-/* Base components */
-@import 'vars.css';
+@import "general/fonts.css";
+@import "general/vars.css";
 @import 'components/global.css';
 @import 'components/forms.css';
 @import 'components/buttons.css';
 
-/* Ghost components */
 @import 'ghost/header.css';
 @import 'ghost/content.css';
 @import 'ghost/readmore.css';

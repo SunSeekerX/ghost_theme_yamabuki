@@ -2,6 +2,8 @@
 <html lang="{{@site.locale}}">
 
 <head>
+    {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
+    <title>{{meta_title page=(t " - 第%页")}}</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -18,12 +20,7 @@
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "static/libs/tocbot-4.11.2/dist/tocbot.css"}}" /> --}}
     {{/is}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" />
-
-    <title>{{meta_title page=(t " - 第%页")}}</title>
-
     {{ghost_head}}
-    {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
-
 </head>
 
 {{!-- 添加line-numbers为所有代码块添加行号 --}}

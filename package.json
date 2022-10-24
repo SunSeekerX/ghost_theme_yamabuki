@@ -59,11 +59,11 @@
     "defaults"
   ],
   "devDependencies": {
-    "@tryghost/release-utils": "0.8.1",
     "@babel/core": "^7.17.5",
+    "@tryghost/release-utils": "0.8.1",
     "autoprefixer": "10.4.7",
-    "beeper": "2.1.0",
     "babel-loader": "^8.2.3",
+    "beeper": "2.1.0",
     "cross-env": "^7.0.3",
     "cssnano": "5.1.12",
     "gscan": "4.34.0",
@@ -79,8 +79,8 @@
     "gulp-zip": "5.1.0",
     "inquirer": "8.2.4",
     "postcss": "^8.4.7",
-    "postcss-color-mod-function": "3.0.3",
     "postcss-color-function": "4.1.0",
+    "postcss-color-mod-function": "3.0.3",
     "postcss-custom-properties": "12.1.4",
     "postcss-easy-import": "3.0.0",
     "pump": "3.0.0",
