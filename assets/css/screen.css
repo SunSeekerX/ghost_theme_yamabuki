@@ -1,5 +1,5 @@
-@import "general/fonts.css";
-@import "general/vars.css";
+@import 'general/fonts.css';
+@import 'general/vars.css';
 @import 'components/global.css';
 @import 'components/forms.css';
 @import 'components/buttons.css';

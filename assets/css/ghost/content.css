@@ -85,7 +85,7 @@
 
 
 .gh-content > * + * {
-  margin-top: 4vmin;
+  margin-top: 2vmin;
 }
 
 .gh-content > [id] + * {
@@ -256,7 +256,7 @@
   flex-direction: row-reverse;
   color: currentColor;
   background: rgba(255, 255, 255, 0.6);
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-sans);
   text-decoration: none;
   border-radius: 5px;
   box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);

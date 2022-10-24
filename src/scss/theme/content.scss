@@ -11,35 +11,38 @@ $color-base-background: #fff5e3;
 $color-base-disabled: #fff5ce;
 
 $color-title: #515151;
-$color-content: #3a3a3a;
+$color-content: #333;
 $color-code: #9b6e23;
 $color-a: #dda52d;
 $color-a-hover: #f9bf45;
 
-$code-font: Operator Mono, Consolas, Monaco, Menlo, monospace, Optima-Regular, Optima, PingFangSC-light,
-  PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-$normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times,
-  "Times New Roman", serif;
+// $code-font: Operator Mono, Consolas, Monaco, Menlo, monospace, Optima-Regular, Optima, PingFangSC-light,
+//   PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+$code-font: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+// $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times,
+//   "Times New Roman", serif;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-span,
-ul,
-ol,
-li,
-th,
-td {
-  text-shadow: 0px 0px 1px #acacac;
-  &::selection {
-    text-shadow: 0px 0px 1px #acacac;
-  }
-}
+$normal-font: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// a,
+// span,
+// ul,
+// ol,
+// li,
+// th,
+// td {
+//   text-shadow: 0px 0px 1px #acacac;
+//   &::selection {
+//     text-shadow: 0px 0px 1px #acacac;
+//   }
+// }
 
 // 首页
 .container {
@@ -359,10 +362,11 @@ td {
       & > .code-toolbar {
         /* font-family: var(--font-serif); */
         // font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         // line-height: 1.6em;
-        line-height: 2em;
-        font-weight: 500;
+        // line-height: 2em;
+        line-height: 1.6;
+        // font-weight: 500;
       }
 
       & ul,

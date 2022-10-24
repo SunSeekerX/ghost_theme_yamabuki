@@ -1,5 +1,6 @@
 .gh-content {
-  letter-spacing: 0.05em;
+  // letter-spacing: 0.05em;
+  letter-spacing: normal;
   color: $color-content;
   font-family: $normal-font;
 
@@ -14,7 +15,7 @@
     padding-left: 6px;
     padding-right: 6px;
     align-self: flex-start;
-    font-weight: bold;
+    font-weight: 600;
     color: $color-title;
     background: linear-gradient(#fff 60%, $color-base 40%);
 
@@ -28,7 +29,8 @@
   }
 
   strong {
-    font-weight: bold;
+    font-weight: 600;
+    margin: 0 2px;
   }
 
   blockquote {
@@ -61,12 +63,13 @@
   p code,
   li code,
   blockquote > code {
-    padding: 2px 6px;
+    padding: 0px 5px;
     color: $color-code;
     background-color: $color-base-background;
     border-radius: 6px;
     font-family: $code-font;
     word-break: normal;
+    margin: 0 2px;
   }
 
   blockquote > code {
@@ -146,7 +149,7 @@
   }
 
   table tr th {
-    font-weight: bold;
+    font-weight: 600;
     background-color: #f0f0f0;
   }
 

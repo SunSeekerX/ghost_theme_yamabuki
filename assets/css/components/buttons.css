@@ -9,7 +9,7 @@
     border: 0;
     border-radius: var(--radius);
     cursor: pointer;
-    font-family: var(--font-sans-serif);
+    font-family: var(--font-sans);
     font-size: 1.4rem;
     font-weight: var(--font-normal);
     line-height: var(--height);
