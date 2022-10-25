@@ -1,0 +1,13 @@
+routes:
+  /archives/:
+    controller: channel
+    template: archives
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

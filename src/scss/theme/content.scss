@@ -1,27 +1,11 @@
-/**
- * @name: 
- * @author: SunSeekerX
- * @Date: 2020-06-16 10:38:33
- * @LastEditors: SunSeekerX
- * @LastEditTime: 2021-04-17 18:02:48
- */
-
 $color-base: #ffb11b;
 $color-base-background: #fff5e3;
 $color-base-disabled: #fff5ce;
-
 $color-title: #515151;
 $color-content: #333;
 $color-code: #9b6e23;
 $color-a: #dda52d;
 $color-a-hover: #f9bf45;
-
-// $code-font: Operator Mono, Consolas, Monaco, Menlo, monospace, Optima-Regular, Optima, PingFangSC-light,
-//   PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-$code-font: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-// $normal-font: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times,
-//   "Times New Roman", serif;
-
 $normal-font: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 
 h1,
@@ -76,7 +60,6 @@ td {
       top: 0;
       opacity: 0.1;
     }
-
     &:nth-child(1) {
       $color: #fe6061;
       &:before {
@@ -94,7 +77,6 @@ td {
         // background-color: rgba($color: $color, $alpha: .8);
       }
     }
-
     &:nth-child(2) {
       $color: #d2a9fc;
       &:before {
@@ -122,7 +104,6 @@ td {
         color: $color;
       }
     }
-
     &:nth-child(4) {
       $color: #74cee7;
       &:before {
@@ -136,7 +117,6 @@ td {
         color: $color;
       }
     }
-
     &:nth-child(5) {
       $color: #8acbff;
       &:before {
@@ -150,7 +130,6 @@ td {
         color: $color;
       }
     }
-
     &:nth-child(6) {
       $color: #55efc4;
       &:before {
@@ -164,7 +143,6 @@ td {
         color: $color;
       }
     }
-
     &:nth-child(7) {
       $color: #9494dc;
       &:before {
@@ -191,7 +169,6 @@ td {
         color: $color;
       }
     }
-
     &:nth-child(9) {
       $color: #e487a3;
       &:before {
@@ -205,7 +182,6 @@ td {
         color: $color;
       }
     }
-
     &:nth-child(10) {
       $color: #d7c6d4;
       &:before {
@@ -219,7 +195,6 @@ td {
         color: $color;
       }
     }
-
     .list-block {
       position: relative;
       border: 1px solid #eae4e45c;
@@ -228,16 +203,13 @@ td {
       margin-bottom: 42px;
       visibility: visible;
       transition: 0.3s;
-
       &:hover {
         box-shadow: 0 -1px 20px 4px rgba(156, 202, 183, 0.27);
       }
-
       a {
         text-decoration: none;
         background-color: transparent;
       }
-
       .list-card-meta {
         font-size: 14px;
         font-weight: 500;
@@ -252,7 +224,6 @@ td {
           text-decoration: underline;
         }
       }
-
       h2 {
         font-size: 20px;
         line-height: 35px;
@@ -265,7 +236,6 @@ td {
           }
         }
       }
-
       p {
         margin-top: 0;
         margin-bottom: 1rem;
@@ -276,7 +246,6 @@ td {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
-
       .btn-read {
         position: relative;
         display: inline-block;
@@ -291,12 +260,10 @@ td {
   @media (max-width: 768px) {
     .blog-list {
       width: 100%;
-
       .list-block {
         margin-bottom: 20px;
         padding: 20px 20px 10px;
       }
-
       &:before,
       &:after {
         opacity: 0;
@@ -350,8 +317,8 @@ td {
 
     .gh-content {
       word-break: break-all;
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
 
       & > blockquote,
       & > ol,
@@ -360,13 +327,8 @@ td {
       & > p,
       & > pre,
       & > .code-toolbar {
-        /* font-family: var(--font-serif); */
-        // font-weight: 400;
         font-size: 1.6rem;
-        // line-height: 1.6em;
-        // line-height: 2em;
         line-height: 1.6;
-        // font-weight: 500;
       }
 
       & ul,
@@ -381,7 +343,7 @@ td {
     }
 
     #vcomments {
-      margin-top: 4vmin;
+      margin-top: 16vmin;
     }
 
     @media (max-width: 650px) {
@@ -393,6 +355,18 @@ td {
       .gh-content pre,
       .gh-content .code-toolbar {
         font-size: 1.6rem;
+      }
+
+      .gh-content {
+        & > blockquote,
+        & > ol,
+        & > ul,
+        & > dl,
+        & > p,
+        & > pre,
+        & > .code-toolbar {
+          line-height: 1.8;
+        }
       }
 
       .gh-content blockquote::before {

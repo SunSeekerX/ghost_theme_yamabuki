@@ -9,22 +9,29 @@
   }
 
   h1,
-  h2,
-  h3,
-  h4 {
-    padding-left: 6px;
-    padding-right: 6px;
+  h2
+  {
+    // padding-left: 6px;
+    // padding-right: 6px;
     align-self: flex-start;
     font-weight: 600;
     color: $color-title;
     background: linear-gradient(#fff 60%, $color-base 40%);
+
+    display: inline-block;
+    background: $color-base;
+    // color: #fff;
+    padding: 6px 8px 3px 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+    box-shadow: 6px 3px 0 0 rgba(255, 177, 27, .5);
 
     code {
       color: $color-title;
       background-color: rgba(27, 31, 35, 0.05);
       word-break: normal;
       border-radius: 6px;
-      font-family: $code-font;
+      font-family: $normal-font;
     }
   }
 
@@ -44,7 +51,7 @@
     word-break: break-all;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: -1.5em;
       top: 0;
@@ -61,13 +68,13 @@
   }
 
   p code,
-  li code,
+  li > code,
   blockquote > code {
-    padding: 0px 5px;
+    padding: 0px 3px;
     color: $color-code;
     background-color: $color-base-background;
     border-radius: 6px;
-    font-family: $code-font;
+    font-family: $normal-font;
     word-break: normal;
     margin: 0 2px;
   }
@@ -84,7 +91,7 @@
     position: relative;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       background: url(/assets/static/imgs/point.png);
       height: 30px;
@@ -103,7 +110,7 @@
       margin: 0.5em 0;
       color: #ccc;
       background: transparent !important;
-      font-family: $code-font;
+      font-family: $normal-font;
       text-align: left;
       white-space: pre;
       word-spacing: normal;
@@ -123,7 +130,7 @@
     box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       background: url(/assets/static/imgs/point.png);
       height: 30px;
@@ -135,6 +142,10 @@
       border-radius: 5px;
       background-position: 10px 10px;
     }
+  }
+
+  pre[class*="language-"].line-numbers {
+    border-radius: 5px;
   }
 
   a {
