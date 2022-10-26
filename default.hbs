@@ -2,109 +2,111 @@
 <html lang="{{@site.locale}}">
 
 <head>
-    {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
-    <title>{{meta_title page=(t " - 第%页")}}</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{!-- bootstrap-4.5.2-dist --}}
-    <link rel="stylesheet" type="text/css"
-        href="{{asset "static/libs/bootstrap-4.5.2-dist/css/bootstrap-grid.min.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "static/libs/aos/aos.css"}}" />
-    {{#is "post"}}
-    {{!-- prismjs --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "static/libs/prismjs/prism.css"}}" />
-    {{!-- tocbot --}}
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "static/libs/tocbot-4.11.2/dist/tocbot.css"}}" /> --}}
-    {{/is}}
-    <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" />
-    {{ghost_head}}
+  {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
+  <title>{{meta_title page=(t " - 第%页")}}</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{!-- bootstrap-5.2.2-dist --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "static/libs/bootstrap-5.2.2-dist/css/bootstrap-grid.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "static/libs/aos/aos.css"}}" />
+  {{#is "post"}}
+  {{!-- prismjs --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "static/libs/prismjs/prism.css"}}" />
+  {{!-- tocbot --}}
+  {{!--
+  <link rel="stylesheet" type="text/css" href="{{asset " static/libs/tocbot-4.11.2/dist/tocbot.css"}}" /> --}}
+  {{/is}}
+  <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" />
+  {{ghost_head}}
 </head>
 
 {{!-- 添加line-numbers为所有代码块添加行号 --}}
+
 <body class="{{body_class}} line-numbers">
-    <div class="gh-viewport">
-        <header id="gh-head" class="gh-head">
-            <nav class="gh-head-inner gh-container">
-                <div class="gh-head-brand">
-                    <a class="gh-head-logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                        <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                        {{else}}
-                        {{@site.title}}
-                        {{/if}}
-                    </a>
-                    <a class="gh-burger" role="button">
-                        <div class="gh-burger-box">
-                            <div class="gh-burger-inner"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gh-head-menu">
-                    {{navigation}}
-                </div>
-                <div class="gh-head-actions">
-                    <div class="gh-head-actions-list">
-                        {{#if @site.facebook}}
-                        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank"
-                            rel="noopener">{{> "icons/facebook"}}</a>
-                        {{/if}}
-                        {{#if @site.twitter}}
-                        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
-                            rel="noopener">{{> "icons/twitter"}}</a>
-                        {{/if}}
-                        <a href="/rss/" title="RSS" target="_blank"
-                            rel="noopener">{{> "icons/rss"}}</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main class="gh-main">
-            {{{body}}}
-            {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-        </main>
-
-        <footer class="gh-foot">
-            <div class="gh-container">
-                <div class="gh-foot-meta">
-                    <p>❤️ <a href="https://github.com/SunSeekerX/ghost-theme-yamabuki" target="_blank" rel="nofollow noopener">Yamabuki</a> Theme. Copyright © 2021 • Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></p>
-                    <p>
-                        <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">湘ICP备19015624号</a>
-                    </p>
-                </div>
+  <div class="gh-viewport">
+    <header id="gh-head" class="gh-head">
+      <nav class="gh-head-inner gh-container">
+        <div class="gh-head-brand">
+          <a class="gh-head-logo" href="{{@site.url}}">
+            {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="{{@site.title}}" />
+            {{else}}
+            {{@site.title}}
+            {{/if}}
+          </a>
+          <a class="gh-burger" role="button">
+            <div class="gh-burger-box">
+              <div class="gh-burger-inner"></div>
             </div>
-        </footer>
-    </div>
+          </a>
+        </div>
+        <div class="gh-head-menu">
+          {{navigation}}
+        </div>
+        <div class="gh-head-actions">
+          <div class="gh-head-actions-list">
+            {{#if @site.facebook}}
+            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{>
+              "icons/facebook"}}</a>
+            {{/if}}
+            {{#if @site.twitter}}
+            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{>
+              "icons/twitter"}}</a>
+            {{/if}}
+            <a href="/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <script src="{{asset "static/libs/jquery-3.5.1.min.js"}}"></script>
-    <script>
-        $(document).ready(function () {
-            // Mobile Menu Trigger
-            $('.gh-burger').click(function () {
-                $('body').toggleClass('gh-head-open');
-            });
-        });
-    </script>
+    <main class="gh-main">
+      {{{body}}}
+      {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+    </main>
 
-    {{!-- 文章界面加载文章标题和代码高亮 --}}
-    {{#is "post"}}
-    {{!-- prismjs --}}
-    <script src="{{asset "static/libs/prismjs/prism.js"}}"></script>
-    <script>
-        // 配置prismjs的autoloader插件
-        Prism.plugins.autoloader.languages_path = '/assets/static/libs/prismjs/prism-components/';
-    </script>
-    {{/is}}
+    <footer class="gh-foot">
+      <div class="gh-container">
+        <div class="gh-foot-meta">
+          <p>❤️ <a href="https://github.com/SunSeekerX/ghost-theme-yamabuki" target="_blank"
+              rel="nofollow noopener">Yamabuki</a> Theme. Copyright © 2021 • Published with <a href="https://ghost.org"
+              target="_blank" rel="noopener">Ghost</a></p>
+          <p>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">湘ICP备19015624号</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    {{!-- custom app.js --}}
-    {{!-- 滚动动画 --}}
-    <script src="{{asset "static/libs/aos/aos.js"}}"></script>
-    <script src="{{asset "built/app.js"}}"></script>
+  <script src="{{asset "static/libs/jquery-3.5.1.min.js"}}"></script>
+  <script>
+    $(document).ready(function () {
+      // Mobile Menu Trigger
+      $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+      });
+    });
+  </script>
 
-    {{ghost_foot}}
+  {{!-- 文章界面加载文章标题和代码高亮 --}}
+  {{#is "post"}}
+  {{!-- prismjs --}}
+  <script src="{{asset "static/libs/prismjs/prism.js"}}"></script>
+  <script>
+    // 配置prismjs的autoloader插件
+    Prism.plugins.autoloader.languages_path = '/assets/static/libs/prismjs/prism-components/';
+  </script>
+  {{/is}}
+
+  {{!-- custom app.js --}}
+  {{!-- 滚动动画 --}}
+  <script src="{{asset "static/libs/aos/aos.js"}}"></script>
+  <script src="{{asset "built/app.js"}}"></script>
+
+  {{ghost_foot}}
 </body>
 
 </html>
