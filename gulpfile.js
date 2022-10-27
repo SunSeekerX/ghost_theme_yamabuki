@@ -72,7 +72,7 @@ function scss(done) {
 
   pump(
     [
-      src('src/scss/app.scss'),
+      src('src/styles/screen.scss', { sourcemaps: true }),
       sass().on('error', sass.logError),
       postcss(processors),
       dest('assets/built/', { sourcemaps: '.' }),
@@ -146,13 +146,15 @@ function zipper(done) {
   )
 }
 
-const cssWatcher = () => watch('assets/css/**', css)
-const scssWatcher = () => watch('src/scss/**', scss)
+// const cssWatcher = () => watch('assets/css/**', css)
+const scssWatcher = () => watch('src/styles/**', scss)
 const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs)
 const jsWatcher = () => watch('src/js/*.js', customJs)
 
-const watcher = parallel(cssWatcher, hbsWatcher, scssWatcher, jsWatcher)
-const build = series(css, js, customJs)
+// const watcher = parallel(cssWatcher, hbsWatcher, scssWatcher, jsWatcher)
+const watcher = parallel(hbsWatcher, scssWatcher, jsWatcher)
+// const build = series(css, js, customJs)
+const build = series(scss, js, customJs)
 const dev = series(build, serve, watcher)
 
 exports.build = build

@@ -8,16 +8,33 @@ import { initValine } from './utils/comment'
  * @name 监听点击A标签，非本站链接进行新标签打开
  */
 function watchSiteLink() {
-  $(document).on('click', 'a', function (event) {
-    const { href, hostname } = event.target
-    // 检查点击a标签的href是一个http url才进行新标签打开
-    if (/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/.test(href)) {
-      if (hostname !== window.location.hostname) {
-        event.preventDefault()
-        window.open(href)
-      }
+  // 链接跳转
+  document.querySelectorAll('.gh-article a').forEach((block) => {
+    if (
+      block.getAttribute('href') !== null &&
+      !/^(#|javascript).*/.test(block.getAttribute('href'))
+    ) {
+      block.setAttribute('target', '_blank')
     }
   })
+
+  // $(document).on('click', null, function (event) {
+  //   console.log(event)
+  //   const { href, hostname } = event.target
+  //   // 检查点击a标签的href是一个http url才进行新标签打开
+  //   if (/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/.test(href)) {
+  //     if (hostname !== window.location.hostname) {
+  //       event.preventDefault()
+  //       window.open(href)
+  //     }
+  //   }
+  //   console.log(
+  //     /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/.test(href),
+  //     hostname,
+  //     window.location.hostname
+  //   )
+  //   event.preventDefault()
+  // })
 }
 
 /**

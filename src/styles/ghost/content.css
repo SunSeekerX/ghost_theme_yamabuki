@@ -15,7 +15,7 @@
     [wide-end]
     minmax(calc(calc(100% - 1200px) / 2), 1fr)
     [full-end]; */
-    grid-template-columns:
+  grid-template-columns:
     [full-start]
     4vw
     [wide-start]
@@ -27,7 +27,6 @@
     [wide-end]
     4vw
     [full-end];
-    
 }
 
 @media (max-width: 1296px) {
@@ -82,7 +81,6 @@
 
 /* Content & Typography
 /* ---------------------------------------------------------- */
-
 
 .gh-content > * + * {
   margin-top: 2vmin;

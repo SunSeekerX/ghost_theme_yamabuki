@@ -1,37 +1,35 @@
 .gh-content {
   // letter-spacing: 0.05em;
   letter-spacing: normal;
-  color: $color-content;
-  font-family: $normal-font;
+  color: var(--color-content);
 
   img {
     align-self: flex-start;
   }
 
   h1,
-  h2
-  {
+  h2 {
     // padding-left: 6px;
     // padding-right: 6px;
     align-self: flex-start;
     font-weight: 600;
-    color: $color-title;
-    background: linear-gradient(#fff 60%, $color-base 40%);
+    color: var(--color-title);
+    background: linear-gradient(#fff 60%, var(--color-theme-base) 40%);
 
     display: inline-block;
-    background: $color-base;
+    background: var(--color-theme-base);
     // color: #fff;
     padding: 6px 8px 3px 6px;
     border-top-right-radius: 6px;
     margin-right: 2px;
-    box-shadow: 6px 3px 0 0 rgba(255, 177, 27, .5);
+    box-shadow: 6px 3px 0 0 rgba(255, 177, 27, 0.5);
 
     code {
-      color: $color-title;
+      color: var(--color-title);
       background-color: rgba(27, 31, 35, 0.05);
       word-break: normal;
       border-radius: 6px;
-      font-family: $normal-font;
+      font-family: var(--font-sans);
     }
   }
 
@@ -43,10 +41,10 @@
   blockquote {
     width: 100%;
     font-style: normal;
-    border-left: 3px solid $color-base;
+    border-left: 3px solid var(--color-theme-base);
     color: #595959;
     quotes: none;
-    background: $color-base-background;
+    background: var(--color-theme-base-background);
     padding: 10px 10px 10px 20px;
     word-break: break-all;
 
@@ -71,16 +69,16 @@
   li > code,
   blockquote > code {
     padding: 0px 3px;
-    color: $color-code;
-    background-color: $color-base-background;
+    color: var(--color-code);
+    background-color: var(--color-theme-base-background);
     border-radius: 6px;
-    font-family: $normal-font;
+    font-family: var(--font-sans);
     word-break: normal;
     margin: 0 2px;
   }
 
   blockquote > code {
-    color: $color-code;
+    color: var(--color-code);
   }
 
   & > pre {
@@ -110,7 +108,7 @@
       margin: 0.5em 0;
       color: #ccc;
       background: transparent !important;
-      font-family: $normal-font;
+      font-family: var(--font-sans);
       text-align: left;
       white-space: pre;
       word-spacing: normal;
@@ -151,10 +149,10 @@
   a {
     text-decoration: none;
     word-wrap: break-word;
-    color: $color-a;
+    color: var(--color-a);
     transition: color 0.3s;
     &:hover {
-      color: $color-a-hover;
+      color: var(--color-a-hover);
       text-decoration: underline;
     }
   }
@@ -172,7 +170,7 @@
     padding: 5px 10px;
     text-align: left;
     code {
-      font-family: $normal-font;
+      font-family: var(--font-sans);
     }
   }
 }

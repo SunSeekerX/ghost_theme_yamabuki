@@ -53,7 +53,19 @@
         "width": 2000
       }
     },
-    "posts_per_page": 10
+    "posts_per_page": 10,
+    "custom": {
+      "env_copyright_text": {
+        "type": "text",
+        "default": "Copyright © 2022",
+        "group": "sitewide"
+      },
+      "env_icp_text": {
+        "type": "text",
+        "default": "XICP备xxxxxxx号",
+        "group": "sitewide"
+      }
+    }
   },
   "browserslist": [
     "defaults"

@@ -1,0 +1,24 @@
+// 分页
+.pagination-area {
+  margin: 58px 0;
+  font-size: 1.4rem;
+  .post-pagination p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      transition: all 0.4s linear;
+      color: #404040;
+      border-radius: 35px;
+      padding: 5px 20px;
+      box-shadow: 0 15px 40px -5px rgba(42, 154, 108, 0.23);
+      text-decoration: none;
+      background-color: transparent;
+    }
+    a:hover {
+      background: var(--color-a-hover);
+      color: #fff;
+    }
+  }
+}

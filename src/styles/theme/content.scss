@@ -1,13 +1,3 @@
-$color-base: #ffb11b;
-$color-base-background: #fff5e3;
-$color-base-disabled: #fff5ce;
-$color-title: #515151;
-$color-content: #333;
-$color-code: #9b6e23;
-$color-a: #dda52d;
-$color-a-hover: #f9bf45;
-$normal-font: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-
 h1,
 h2,
 h3,
@@ -230,9 +220,9 @@ td {
         margin-bottom: 20px;
 
         a {
-          color: #333;
+          color: var(--color-content);
           &:hover {
-            color: $color-a-hover;
+            color: var(--color-a-hover);
           }
         }
       }
@@ -272,34 +262,6 @@ td {
   }
 }
 
-// 分页
-.pagination-area {
-  margin: 58px 0;
-  .post-pagination p {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-
-    a {
-      display: block;
-      -webkit-transition: all 0.4s linear;
-      transition: all 0.4s linear;
-      color: #404040;
-      border-radius: 35px;
-      padding: 5px 20px;
-      box-shadow: 0 15px 40px -5px rgba(42, 154, 108, 0.23);
-      text-decoration: none;
-      background-color: transparent;
-    }
-    a:hover {
-      background: $color-a-hover;
-      -webkit-transition: all 0.3s linear;
-      transition: all 0.3s linear;
-      color: #fff;
-    }
-  }
-}
-
 .gh-content-wrap {
   box-sizing: border-box;
   padding: 12px;
@@ -317,8 +279,6 @@ td {
 
     .gh-content {
       word-break: break-all;
-      // display: flex;
-      // flex-direction: column;
 
       & > blockquote,
       & > ol,
@@ -365,7 +325,7 @@ td {
         & > p,
         & > pre,
         & > .code-toolbar {
-          line-height: 1.8;
+          line-height: 1.6;
         }
       }
 
@@ -373,11 +333,5 @@ td {
         left: -4vw;
       }
     }
-
-    @import "yellow";
   }
 }
-
-
-// 友链
-@import "_friends";

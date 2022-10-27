@@ -19,7 +19,7 @@
   {{!--
   <link rel="stylesheet" type="text/css" href="{{asset " static/libs/tocbot-4.11.2/dist/tocbot.css"}}" /> --}}
   {{/is}}
-  <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" />
+  {{!-- <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" /> --}}
   {{ghost_head}}
 </head>
 
@@ -71,11 +71,13 @@
       <div class="gh-container">
         <div class="gh-foot-meta">
           <p>❤️ <a href="https://github.com/SunSeekerX/ghost-theme-yamabuki" target="_blank"
-              rel="nofollow noopener">Yamabuki</a> Theme. Copyright © 2021 • Published with <a href="https://ghost.org"
+              rel="nofollow noopener">Yamabuki</a> Theme.{{#if @custom.env_copyright_text}} {{@custom.env_copyright_text}} •{{/if}} Published with <a href="https://ghost.org"
               target="_blank" rel="noopener">Ghost</a></p>
+          {{#if @custom.env_icp_text}}
           <p>
-            <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">湘ICP备19015624号</a>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">{{@custom.env_icp_text}}</a>
           </p>
+          {{/if}}
         </div>
       </div>
     </footer>
