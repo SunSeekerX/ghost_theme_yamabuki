@@ -26,6 +26,7 @@ dist/
 # another files
 package-lock.json
 yarn.lock
+assets/built
 
 # yarn 2.0+
 .pnp.*
