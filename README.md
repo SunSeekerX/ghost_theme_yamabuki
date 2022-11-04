@@ -1,16 +1,14 @@
 # Ghost Theme Yamabuki
 
-`Ghost blog`主题。参考：[PrimulaGhost](https://themeix.com/livedemo?theme=PrimulaGhost)
+参考：[PrimulaGhost](https://themeix.com/livedemo?theme=PrimulaGhost)
 
 预览：[https://yoouu.cn/](https://yoouu.cn/)
 
-
-
 ## 主题特色
 
-- 百度统计支持
-- Valine 评论系统的支持
+- Twikoo 评论系统的支持
 - 简约清新的日系风格
+- 代理高亮
 - ...
 
 ## 使用
@@ -31,84 +29,6 @@ git clone https://github.com/SunSeekerX/ghost-theme-yamabuki
 yarn
 ```
 
-### 替换配置信息
-
-本主题有两个配置信息，分别在`${app}/src/config/index`，`${app}/src/config/build`
-
-`${app}/src/config/index`
-
-在运行时的配置，例如初始化评论，百度统计等
-
-```javascript
-export default {
-  /**
-   * @name 百度统计配置
-   */
-  baiduTongji: {
-    // 是否打开
-    open: true,
-    // 百度统计key
-    key: '3f0d7a82297c929467637543290d6e37',
-  },
-
-  /**
-   * @name valine配置
-   * @more https://valine.js.org/configuration.html
-   */
-  valineOptions: {
-    // 是否打开
-    open: true,
-    // Valine 的初始化挂载器。可以是一个CSS 选择器，也可以是一个实际的HTML元素。
-    el: '#vcomments',
-    // leancloud 应用 appid
-    appId: '4zCOQmtHXSOvLlPnTV108NOw-gzGzoHsz',
-    // leancloud 应用 appkey
-    appKey: 'sMdusoM6SbN9tgyCCKzTIwif',
-    // 评论框占位提示符。
-    placeholder: '请您理智发言，共建美好社会！',
-    // Gravatar 头像展示方式。
-    avatar: 'mm',
-    // 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表。
-    path: window.location.pathname,
-    // 文章访问量统计
-    visitor: true,
-    // 代码高亮
-    highlight: true,
-    // 是否记录评论者IP
-    recordIP: true,
-  },
-}
-```
-
-`~~${app}/src/config/build`~~
-
-~~在编译时的配置，打包完成需要替换主题内的模板字符串，例如备案信息等~~
-
-```javascript
-module.exports = {
-  /**
-   * @name 备案信息
-   */
-  record: {
-    // 网站备案信息
-    siteRecord: {
-      // 信息
-      name: '湘ICP备19015624号',
-      // 网站备案查询地址：以下为默认
-      url: 'http://beian.miit.gov.cn/',
-    },
-
-    // 公安备案信息
-    publicRecord: {
-      // 信息
-      name: '',
-      // 地址
-      url: '',
-    },
-  },
-}
-```
-
 ### 编译打包
 
 项目根目录下执行
@@ -120,6 +40,22 @@ yarn zip
 ### 上传主题
 
 打包之后的文件位于`${app}/dist/`，通过`ghost`后台上传即可。
+
+### 配置
+
+**Env copyright text**
+
+copyright 标识
+
+**Env icp text**
+
+icp 备案号
+
+**Env twikoo id**
+
+twikoo 评论 id
+
+> 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
 
 ## 开发
 
@@ -164,8 +100,6 @@ yarn zip
    yarn dev
    # or
    yarn serve
-   
-   
    ```
 
    ```
@@ -193,26 +127,10 @@ yarn zip
    [20:15:14] Starting 'jsWatcher'...
    ```
 
-### 基础文件解释
-
-
-
-### ~~主题内需要替换的模板字符串~~
-
-自己找字符改下就行。
-
-~~`default.hbs`~~
-
-~~$siteRecord.url$ - 备案信息链接地址~~
-
-~~$siteRecord.name$ - 备案显示名字~~
-
-
-
 ## 暂存问题
 
 1. 没有格式化支持，vscode、webstorm 对 handlebars 的格式化支持都不太好。
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).

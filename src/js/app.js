@@ -1,12 +1,4 @@
-import config from '@/config/index'
-
-import { initBaiduTongji } from './utils/baidu'
-import { initValine } from './utils/comment'
-// import { loadScript, loadCSS, logDynamicLoadFiles } from '@/js/utils/index'
-
-/**
- * @name 监听点击A标签，非本站链接进行新标签打开
- */
+// 监听点击A标签，非本站链接进行新标签打开
 function watchSiteLink() {
   // 链接跳转
   document.querySelectorAll('.gh-article a').forEach((block) => {
@@ -37,9 +29,7 @@ function watchSiteLink() {
   // })
 }
 
-/**
- * @name 文档准备好
- */
+// 文档准备好
 $(document).ready(() => {
   // 监听点击A标签，非本站链接进行新标签打开
   watchSiteLink()
@@ -47,17 +37,7 @@ $(document).ready(() => {
   // 动画初始化
   AOS.init()
 
-  // 百度统计
-  if (config.baiduTongji.open) {
-    initBaiduTongji()
-  }
-
-  // 评论
-  // if (config.valineOptions.open) {
-  //   initValine(config.valineOptions)
-  // }
-
-  // twikoo
+  // twikoo 评论系统
   if ($('#tcomment').length !== 0 && window._ghost_env_twikoo_id) {
     twikoo.init({
       envId: window._ghost_env_twikoo_id, // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
