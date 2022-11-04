@@ -64,6 +64,11 @@
         "type": "text",
         "default": "XICP备xxxxxxx号",
         "group": "sitewide"
+      },
+      "env_twikoo_id": {
+        "type": "text",
+        "default": "",
+        "group": "sitewide"
       }
     }
   },
