@@ -1,6 +1,6 @@
 {
   "name": "yamabuki",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A custom theme for ghost",
   "keywords": [
     "ghost",
@@ -19,10 +19,9 @@
     "url": "https://yoouu.cn/"
   },
   "scripts": {
-    "build:static": "cross-env NODE_ENV=production gulp build",
     "dev": "cross-env NODE_ENV=development gulp",
+    "build:static": "cross-env NODE_ENV=production gulp build",
     "gc": "git add -A && git-cz && git pull && git push",
-    "serve": "cross-env NODE_ENV=development gulp",
     "preship": "cross-env NODE_ENV=production yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
     "postship": "cross-env NODE_ENV=production && git fetch && gulp release",
@@ -76,14 +75,14 @@
     "defaults"
   ],
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.21.8",
     "@tryghost/release-utils": "0.8.1",
-    "autoprefixer": "10.4.7",
-    "babel-loader": "^8.2.3",
+    "autoprefixer": "10.4.14",
+    "babel-loader": "^8.3.0",
     "beeper": "2.1.0",
     "cross-env": "^7.0.3",
     "cssnano": "5.1.12",
-    "gscan": "4.34.0",
+    "gscan": "4.36.3",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
     "gulp-livereload": "4.0.2",
@@ -94,8 +93,8 @@
     "gulp-util": "3.0.8",
     "gulp-watch": "5.0.1",
     "gulp-zip": "5.1.0",
-    "inquirer": "8.2.4",
-    "postcss": "^8.4.7",
+    "inquirer": "9.2.5",
+    "postcss": "^8.4.23",
     "postcss-color-function": "4.1.0",
     "postcss-color-mod-function": "3.0.3",
     "postcss-custom-properties": "12.1.4",
@@ -104,7 +103,7 @@
     "sass": "^1.49.9",
     "webpack-stream": "^6.1.2"
   },
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.5.1",
   "engines": {
     "ghost": ">=5.0.0"
   },

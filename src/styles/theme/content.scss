@@ -41,7 +41,7 @@ td {
       font-size: 35px;
     }
     &:after {
-      content: "";
+      content: '';
       border: 2px solid #fe6061;
       position: absolute;
       left: -63px;
@@ -53,7 +53,7 @@ td {
     &:nth-child(1) {
       $color: #fe6061;
       &:before {
-        content: "1";
+        content: '1';
         background-color: $color;
       }
       &:after {
@@ -70,7 +70,7 @@ td {
     &:nth-child(2) {
       $color: #d2a9fc;
       &:before {
-        content: "2";
+        content: '2';
         background-color: $color;
       }
       &:after {
@@ -84,7 +84,7 @@ td {
     &:nth-child(3) {
       $color: #f8d86b;
       &:before {
-        content: "3";
+        content: '3';
         background-color: $color;
       }
       &:after {
@@ -97,7 +97,7 @@ td {
     &:nth-child(4) {
       $color: #74cee7;
       &:before {
-        content: "4";
+        content: '4';
         background-color: $color;
       }
       &:after {
@@ -110,7 +110,7 @@ td {
     &:nth-child(5) {
       $color: #8acbff;
       &:before {
-        content: "5";
+        content: '5';
         background-color: $color;
       }
       &:after {
@@ -123,7 +123,7 @@ td {
     &:nth-child(6) {
       $color: #55efc4;
       &:before {
-        content: "6";
+        content: '6';
         background-color: $color;
       }
       &:after {
@@ -136,7 +136,7 @@ td {
     &:nth-child(7) {
       $color: #9494dc;
       &:before {
-        content: "7";
+        content: '7';
         background-color: $color;
       }
       &:after {
@@ -149,7 +149,7 @@ td {
     &:nth-child(8) {
       $color: #8c949a;
       &:before {
-        content: "8";
+        content: '8';
         background-color: $color;
       }
       &:after {
@@ -162,7 +162,7 @@ td {
     &:nth-child(9) {
       $color: #e487a3;
       &:before {
-        content: "9";
+        content: '9';
         background-color: $color;
       }
       &:after {
@@ -175,7 +175,7 @@ td {
     &:nth-child(10) {
       $color: #d7c6d4;
       &:before {
-        content: "10";
+        content: '10';
         background-color: $color;
       }
       &:after {
@@ -271,11 +271,12 @@ td {
   align-items: center;
 
   .box {
-    padding: 8vmin 4vw;
-    max-width: 1000px;
+    // padding: 8vmin 4vw;
+    padding: 4vmin 4vw;
+    max-width: 1200px;
     width: 100%;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s;
 
     .gh-content {
@@ -288,7 +289,9 @@ td {
       & > p,
       & > pre,
       & > .code-toolbar {
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
+        font-size: 2.2rem;
+        // line-height: 1.8;
         line-height: 1.8;
       }
 
