@@ -1,5 +1,7 @@
 # Ghost Theme Yamabuki
 
+> 坚持一些很小众的东西是一个很难能可贵的事情，不管它是什么，都应该值得尊敬。
+
 参考：[PrimulaGhost](https://themeix.com/livedemo?theme=PrimulaGhost)
 
 预览：[https://yoouu.cn/](https://yoouu.cn/)
