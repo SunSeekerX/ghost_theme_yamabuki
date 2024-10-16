@@ -106,7 +106,7 @@
     "gulp-zip": "5.1.0",
     "inquirer": "8.2.4",
     "log-symbols": "^7.0.0",
-    "postcss": "8.2.13",
+    "postcss": "8.4.31",
     "postcss-color-function": "4.1.0",
     "postcss-color-mod-function": "3.0.3",
     "postcss-custom-properties": "14.0.2",
