@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'general/vars.css';
 @import 'general/fonts.css';
 @import 'general/global.css';
@@ -16,3 +20,7 @@
 @import 'theme/yellow.scss';
 @import 'theme/friends.scss';
 @import 'theme/pagination.scss';
+@import 'animate.css';
+@import 'site-footer.css';
+@import 'site-to-top.css';
+// @import 'site-footer-navbar.css';

@@ -1,11 +1,10 @@
+import './site-to-top'
+
 // 监听点击A标签，非本站链接进行新标签打开
 function watchSiteLink() {
   // 链接跳转
   document.querySelectorAll('.gh-article a').forEach((block) => {
-    if (
-      block.getAttribute('href') !== null &&
-      !/^(#|javascript).*/.test(block.getAttribute('href'))
-    ) {
+    if (block.getAttribute('href') !== null && !/^(#|javascript).*/.test(block.getAttribute('href'))) {
       block.setAttribute('target', '_blank')
     }
   })

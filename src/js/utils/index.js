@@ -64,3 +64,11 @@ export function loadCSS(fileName, callback = () => {}, into = 'body') {
 export function logDynamicLoadFiles() {
   console.log('已经动态加载资源：', loadFiles)
 }
+
+/**
+ * 获取页面顶部距离
+ * @returns {Number}
+ */
+export const getScrollTop = () => {
+  return document.documentElement.scrollTop || window.scrollY || window.pageYOffset
+}

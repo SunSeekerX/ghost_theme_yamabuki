@@ -1,0 +1,143 @@
+{{!< default}}
+
+<section class='archive-page'>
+  <div id='posts-list'>
+    {{#foreach posts}}
+      <article class='post'>
+        <h2>
+          <a href='{{url}}'>
+            {{title}}
+          </a>
+          <span class='post-date'>
+            {{date format='YYYY-MM-DD'}}
+          </span>
+        </h2>
+        <p class='post-excerpt'>
+          {{excerpt words='30'}}
+        </p>
+      </article>
+    {{/foreach}}
+  </div>
+
+  <nav class='pagination'>
+    {{#if pagination.prev}}
+      <a href='{{pagination.prev}}' class='prev'>
+        上一页
+      </a>
+    {{/if}}
+
+    {{#if pagination.next}}
+      <a href='{{pagination.next}}' class='next'>
+        下一页
+      </a>
+    {{/if}}
+  </nav>
+
+  {{> "site-to-top"}}
+</section>
+
+<style>
+  /* General Styles */
+
+/* Container for the archive page */
+.archive-page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Post List */
+#posts-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual Post Style */
+.post {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.post:last-child {
+  border-bottom: none;  /* Remove the border from the last post */
+}
+
+.post h2 {
+  font-size: 1.4rem;
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 间距 */
+}
+
+.post h2 a {
+  color: #6c757d;  /* 链接的中灰色 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post h2 a:hover {
+  color: #495057;  /* 悬停时的深灰色 */
+}
+
+/* Post Date Style */
+.post-date {
+  font-size: 0.8rem;  /* 较小的字体 */
+  color: #999;  /* 较淡的灰色 */
+  margin-left: 10px;  /* 与标题保持适当间距 */
+  font-weight: normal;
+}
+
+/* Post Excerpt */
+.post-excerpt {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination a {
+  background-color: #6c757d;  /* 使用橙黄色 */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #495057;  /* 悬停时使用略深的橙黄色 */
+}
+
+.pagination .prev {
+  margin-right: auto;
+}
+
+.pagination .next {
+  margin-left: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .archive-page {
+    padding: 10px;
+  }
+  
+  .post h2 {
+  }
+
+  .post-excerpt {
+  }
+
+  .pagination a {
+    padding: 6px 12px;
+  }
+}
+</style>

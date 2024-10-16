@@ -1,12 +1,14 @@
 routes:
-  /archives/:
+  /archive/:
+    template: archive
     controller: channel
-    template: archives
+    limit: 100 # 每页显示 10 篇文章
 
 collections:
   /:
     permalink: /{slug}/
     template: index
+    filter: tag:-hash-draft+tag:-hash-private  # 可选: 过滤掉一些标签 添加于 2024-10-14 23:26:31
 
 taxonomies:
   tag: /tag/{slug}/
